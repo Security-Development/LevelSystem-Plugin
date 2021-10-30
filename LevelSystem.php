@@ -174,7 +174,7 @@
 
   public function getTime(string $name) : string {
     if(!$this->isKey($name))
-      return "Not Fount";
+      return "Not Found";
     else
       return $this->get($name)['boster']['time'];
   }
@@ -182,7 +182,7 @@
   public function getExpiryTime(string $name) : string {
     if(!$this->isKey($name))
     {
-      return "Not Fount";
+      return "Not Found";
     }else {
       $time = strtotime($this->getBoster($name)['time']) - strtotime(date("y-m-d H:i:s"));
       if($time <= 0 )
@@ -207,7 +207,7 @@
 
   public function getMultiples(string $name) : int {
     if(!$this->isKey($name))
-      return "Not Fount";
+      return "Not Found";
     else
       return $this->get($name)['boster']['multuples'];
   }
